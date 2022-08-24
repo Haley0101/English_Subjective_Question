@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>로그인</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <script>
+        var cssRule= "font-size:2em;"
+        var cssLogo1 ="color:#FF0000;" +"font-size: 60px;" +"font-weight: bold;" +"letter-space:-1px;" +"font-family:Tahoma,Arial,sans-serif";
+        if(window.console!=undefined){
+            setTimeout(console.log.bind(console,"%c경고! 주의", cssLogo1), 0);
+            setTimeout(console.log.bind(console,"%c해당 홈페이지 저작권은 대진전자통신고등학교 박세찬에게 있습니다.", cssRule), 0);
+        }
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+            border-radius: 5px;
+        }
+
+        body {
+            margin: 0;
+            background-color: #424242;
+        }
+
+        .login-form {
+            width: 300px;
+            background-color: #EEEFF1;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 100px;
+            padding: 20px;
+            text-align: center;
+            border: none;
+
+        }
+
+        .text-field {
+            font-size: 14px;
+            padding: 10px;
+            border: none;
+            width: 260px;
+            margin-bottom: 10px;
+
+        }
+
+        .submit-btn {
+            font-size: 14px;
+            border: none;
+            padding: 10px;
+            width: 260px;
+            background-color: #282828;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .links {
+            text-align: center;
+        }
+
+        .links a {
+            font-size: 12px;
+            color: #9B9B9B;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form">
+        <form action="http://localhost:2022" method="POST">
+            <input type="text" name="username" class="text-field" placeholder="이름">
+            <input type="number" name="classnum" class="text-field" placeholder="학번">
+            <input type="submit" value="접속하기" class="submit-btn">
+        </form>
+    </div>
+</body>
+
+</html>

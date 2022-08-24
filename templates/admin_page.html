@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        #Eng_StringInputBox {
+            display: none;
+        }
+
+        #Test2 {
+            display: none;
+        }
+
+        .button {
+            position: relative;
+            background-color: #4CAF50;
+            border: none;
+            font-size: 28px;
+            color: #FFFFFF;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .button:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+        }
+
+        .button:active:after {
+            padding: 0;
+            margin: 0;
+            opacity: 1;
+            transition: 0s
+        }
+    </style>
+    <script>
+        function f_StringInputBox() {
+            var con = document.getElementById("Eng_StringInputBox");
+            if (con.style.display == 'none') {
+                con.style.display = 'block';
+            } else {
+                con.style.display = 'none';
+            }
+        }
+
+        function f_test2() {
+            var con = document.getElementById("Test2");
+            if (con.style.display == 'none') {
+                con.style.display = 'block';
+            } else {
+                con.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button class="button" onclick="f_StringInputBox()">영어 서답형 입력란</button> <button class="button" onclick="f_test2()">테스트2</button>
+
+    <div id="Eng_StringInputBox">
+        영어 서답형 입력란
+        <form action="/eng-stringinputjsonload" method="post">
+            <input type="text" name="engA1" placeholder="영어 서답형 1번을 입력 해주세요.">
+            <br><input type="text" name="engA2" placeholder="영어 서답형 2번을 입력 해주세요.">
+            <br><input type="text" name="engA3" placeholder="영어 서답형 3번을 입력 해주세요.">
+            <br><br><input type="submit" value="확인">
+        </form>
+    </div>
+
+    <div id="Test2">테스트2 결과</div>
+</body>
+
+</html>
